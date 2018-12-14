@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='snakegame.css'/>
+    </head>
+    <body>
+        <div id='overlay' class='overlay'>
+            <div id='infobox' class='infobox'>
+                <div id='gamestart'>
+                    <h5>Controls</h5>
+                    <table class='control-item'>
+                        <tr>
+                            <td>&uarr; : Snake-up</td>
+                            <td>&darr; : Snake-down</td>
+                        </tr>
+                        <tr>
+                            <td>&larr; : Snake-left</td>
+                            <td>&rarr; : Snake-right</td>
+                        </tr>
+                        <tr><td colspan='2'>Space : play/pause</td></tr>
+                    </table>
+                    <a class='overlay-control' onclick='start()'>Start</a>
+                </div>
+                <div class='gameover' id='gameover'>
+                    <h3>GAME OVER!</h3>
+                    Your Score is : <span id='overlay-score'>0</span>
+                    <a class="overlay-control" onclick="restart()">Restart</a>
+                </div>
+            </div>
+        </div>
+        <div class='topbar'>
+            <div class='logo'>
+                SNAKEGAME
+            </div>
+            <div id='score' class='score'>
+                SCORE : 0
+            </div>
+            <a class="restart" onclick="restart()">Restart</a>
+        </div>
+        <div id='arena' class='arena'></div>
+        <script src='snakegame.js'></script>
+        <script src='gamecontrol.js'></script>
+    </body>
+</html>

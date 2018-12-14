@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #EEE;
+}
+
+/*
+* Topbar - logo , score & restart button
+*/
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#DDD;
+    height: 40px;
+    width:100%;
+    box-shadow:  2px 2px 2px 1px rgba(0, 0, 0, .2);
+    font-family: monospace;
+    color: #666;
+    text-align: center;
+}
+.logo{
+    width: 200px;
+    float: left;
+    margin-left: 20px; 
+    height:40px;
+    font-size:30px;
+}
+.score{
+    width: 180px;
+    float: right;
+    height:40px;
+    font-size:20px;
+    line-height: 40px;
+}
+.restart{
+    width:100px;
+    text-align: center;
+    height: 30px;
+    display: block;
+    background-color: #666;
+    color:#EEE;
+    font-size: 0.9em;
+    cursor: hand;
+    float: right;
+    line-height: 30px;
+    margin-top: 3px;
+    font-size: 20px;
+    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, .2);
+}
+
+/*
+* Individual boxes for grass ,
+* snake and apple
+*/
+span{
+    width:15px;
+    height:15px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    display:inline-block;
+}
+
+/*
+* game play area for 
+* grid of boxes
+*/
+.arena{
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 680px;
+}
+.grass{
+    background-color: #EEE;
+}
+.wall{
+    background-color: brown;
+}
+.snake{
+    background-color: #444;
+}
+.apple{
+    background-color: #6B8A01;
+}
+
+/*
+* Overlay displayed on 
+* game start and end
+*/
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+    font-family: monospace;
+}
+.infobox{
+    background-color: #EEE;
+    width: 500px;
+    border-radius: 50px;
+    padding: 50px;
+    color: #666;
+    text-align: center;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    font-size: 35px;
+}
+.control-item{
+    font-size: 20px;
+    display: inline-block;
+    height: 250px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+    width: 500px;
+}
+.control-item tr{
+    height: 60px;
+}
+.control-item td{
+    width: 400px;
+}
+.overlay-control{
+    width:160px;
+    text-align: center;
+    display: block;
+    background-color: #666;
+    color:#EEE;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: hand;
+    margin-top: 20px;
+    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, .2);
+}
+.gamestart{
+    display: none;
+}
+.gameover{
+    display: none;
+}
+
+/*
+* Restart button hide
+* on small width
+*/
+@media (max-width: 500px) {
+    .restart{
+        display: none;
+    }
+}
